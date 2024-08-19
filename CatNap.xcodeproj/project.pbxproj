@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60D9DAF2C73938200998852 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA62C73938200998852 /* backgroundMusic.mp3 */; };
+		E60D9DB02C73938200998852 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA62C73938200998852 /* backgroundMusic.mp3 */; };
+		E60D9DB12C73938200998852 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA72C73938200998852 /* lose.mp3 */; };
+		E60D9DB22C73938200998852 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA72C73938200998852 /* lose.mp3 */; };
+		E60D9DB32C73938200998852 /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA82C73938200998852 /* mrreow.mp3 */; };
+		E60D9DB42C73938200998852 /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA82C73938200998852 /* mrreow.mp3 */; };
+		E60D9DB52C73938200998852 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA92C73938200998852 /* pop.mp3 */; };
+		E60D9DB62C73938200998852 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DA92C73938200998852 /* pop.mp3 */; };
+		E60D9DB72C73938200998852 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DAA2C73938200998852 /* win.mp3 */; };
+		E60D9DB82C73938200998852 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E60D9DAA2C73938200998852 /* win.mp3 */; };
 		E6FCA2FB2C6E582300154A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCA2FA2C6E582300154A38 /* AppDelegate.swift */; };
 		E6FCA2FD2C6E582300154A38 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCA2FC2C6E582300154A38 /* GameViewController.swift */; };
 		E6FCA3002C6E582300154A38 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E6FCA2FF2C6E582300154A38 /* Base */; };
@@ -25,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60D9DA62C73938200998852 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		E60D9DA72C73938200998852 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		E60D9DA82C73938200998852 /* mrreow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mrreow.mp3; sourceTree = "<group>"; };
+		E60D9DA92C73938200998852 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		E60D9DAA2C73938200998852 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		E6FCA2F02C6E582200154A38 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		E6FCA2F12C6E582200154A38 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E6FCA2F22C6E582300154A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +74,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E60D9DAB2C73938200998852 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E60D9DA62C73938200998852 /* backgroundMusic.mp3 */,
+				E60D9DA72C73938200998852 /* lose.mp3 */,
+				E60D9DA82C73938200998852 /* mrreow.mp3 */,
+				E60D9DA92C73938200998852 /* pop.mp3 */,
+				E60D9DAA2C73938200998852 /* win.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		E60D9DAC2C73938200998852 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E60D9DAB2C73938200998852 /* Sounds */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		E6FCA2E92C6E582100154A38 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +107,7 @@
 		E6FCA2EE2C6E582200154A38 /* CatNap Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E60D9DAC2C73938200998852 /* Resource */,
 				E6FCA3222C6F8C1700154A38 /* Screnes */,
 				E6FCA2F12C6E582200154A38 /* GameScene.swift */,
 				E6FCA2F22C6E582300154A38 /* Assets.xcassets */,
@@ -198,7 +234,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60D9DB72C73938200998852 /* win.mp3 in Resources */,
+				E60D9DB12C73938200998852 /* lose.mp3 in Resources */,
+				E60D9DAF2C73938200998852 /* backgroundMusic.mp3 in Resources */,
 				E6FCA3272C6F8CA100154A38 /* Cat.sks in Resources */,
+				E60D9DB52C73938200998852 /* pop.mp3 in Resources */,
+				E60D9DB32C73938200998852 /* mrreow.mp3 in Resources */,
 				E6FCA3142C6E582300154A38 /* GameScene.sks in Resources */,
 				E6FCA3002C6E582300154A38 /* Base in Resources */,
 				E6FCA3032C6E582300154A38 /* Base in Resources */,
@@ -211,7 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FCA3282C6F8CA100154A38 /* Cat.sks in Resources */,
+				E60D9DB02C73938200998852 /* backgroundMusic.mp3 in Resources */,
+				E60D9DB62C73938200998852 /* pop.mp3 in Resources */,
 				E6FCA3102C6E582300154A38 /* Base in Resources */,
+				E60D9DB82C73938200998852 /* win.mp3 in Resources */,
+				E60D9DB42C73938200998852 /* mrreow.mp3 in Resources */,
+				E60D9DB22C73938200998852 /* lose.mp3 in Resources */,
 				E6FCA3152C6E582300154A38 /* GameScene.sks in Resources */,
 				E6FCA3192C6E582300154A38 /* Assets.xcassets in Resources */,
 			);
