@@ -6,8 +6,16 @@
 //
 
 import SpriteKit
+protocol EventListenerNode {
+    func didMoveToScene()
+}
 
 class GameScene: SKScene {
+    var bedNode: BedNode!
+    var catNode: CatNode!
+    
+    
+    
     fileprivate var label: SKLabelNode?
     fileprivate var spinnyNode: SKShapeNode?
 
@@ -46,8 +54,36 @@ class GameScene: SKScene {
     }
 
     override func didMove(to view: SKView) {
-        setUpScene()
-        // 1. 强制重新渲染
+        SKTAudio.sharedInstance()
+        .playBackgroundMusic("backgroundMusic.mp3")
+        view.isPaused = true
+        view.isPaused = false
+        // Calculate playable margin
+        let maxAspectRatio: CGFloat = 16.0 / 9.0
+        let maxAspectRatioHeight = size.width / maxAspectRatio
+        let playableMargin: CGFloat = (size.height
+            - maxAspectRatioHeight) / 2
+        let playableRect = CGRect(x: 0, y: playableMargin,
+                                  width: size.width, height: size.height - playableMargin * 2 + 100)
+        physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
+//        view.showsPhysics = true
+
+        enumerateChildNodes(withName: "//*", using: { node, _ in
+            if let eventListenerNode = node as? EventListenerNode {
+                eventListenerNode.didMoveToScene()
+            }
+        })
+        // gameScene.sks 直接子级
+        bedNode = (childNode(withName: "bed") as! BedNode)
+        // gameScene.sks 的 cat.sks 查询
+        catNode = (childNode(withName: "//cat_body") as! CatNode)
+//        bedNode.setScale(1.5)
+//        catNode.setScale(1.5)
+    }
+
+//    override func didMove(to view: SKView) {
+//        setUpScene()
+    // 1. 强制重新渲染
 //        在某些情况下，设置 isPaused 属性为 true 会暂停场景的更新和渲染，而将其设置为 false 后，会强制重新启动渲染过程。这种方式可以确保场景及其动画正确地开始更新。由于 SKView 在场景加载后可能没有立即更新，因此通过这种方式可以强制场景重新渲染。
 //
 //        2. 触发内部刷新
@@ -58,8 +94,8 @@ class GameScene: SKScene {
 //
 //        4. 处理视图更新问题
 //        在某些情况下，视图可能需要强制刷新以应用最新的状态。设置 isPaused 可能会触发视图的刷新和重新绘制，解决了动画不立即显示的问题。
-        view.isPaused = true
-        view.isPaused = false
+//        view.isPaused = true
+//        view.isPaused = false
 
 //        if let sksPath = Bundle.main.path(forResource: "Cat", ofType: "sks"),
 //           let scene = SKScene(fileNamed: "Cat") {
@@ -74,7 +110,7 @@ class GameScene: SKScene {
 //                }
 //            }
 //        }
-    }
+//    }
 
     func makeSpinny(at pos: CGPoint, color: SKColor) {
         if let spinny = spinnyNode?.copy() as! SKShapeNode? {
